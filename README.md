@@ -1,19 +1,262 @@
-# 风与鱼之歌 · PELICAN COAST
+<img width="576" height="431" alt="image" src="https://github.com/user-attachments/assets/13039fe4-498b-431c-9102-9db4e3fac9e9" /># 风与鱼之歌 · PELICAN COAST
 
-A self-contained static website (except its pinned Three.js ESM CDN dependency and optional Google Fonts). No backend, API key, image asset or build step is needed.
 
-## Run locally
+# 🦩 鹈鹕海岸 | Pelican Coast
 
-Open a terminal in this folder and run `python -m http.server 8080`, then visit http://localhost:8080. Opening `index.html` as a `file://` URL may fail in some browsers because ES modules follow origin rules. An active Internet connection is required for the Three.js CDN import. The site is ready for Vercel, Netlify, Cloudflare Pages or GitHub Pages as static files.
+### 🌊 一只鹈鹕、一辆自行车、一场永不结束的海岸冒险
 
-## Controls
+一款由 AI 辅助开发的 3D 浏览器小游戏。
 
-W/S or ↑/↓ — accelerate / brake; A/D or ←/→ — lane change; Space — jump; T — flap and wheelie; C — cycle 5 cameras; M — audio; P/Escape — pause. On mobile, use the on-screen controls or swipe. After 8.5 seconds without driving input, autopilot follows upcoming fish.
+戴上头盔和墨镜，系好红色围巾，与鹈鹕一起沿着美丽的海岸公路骑行。在落日余晖中追逐飞鱼，在星空月夜下迎着海风前进，享受轻松、有趣又充满惊喜的海岸之旅。
 
-## Highlights
+无需下载安装，打开浏览器即可开始游戏！
 
-Original procedural pelican and bicycle built from geometry, rotating spokes and bicycle wheels, inverse-kinematic pedaling, Verlet-simulated flowing scarf, custom animated ocean and shore-foam shaders, evolving dusk-to-moonlight sky, stars, moon, sun and lighthouse, dynamically generated melodic soundtrack synced to pedal cadence, procedural wind/wave sounds, 14 persistent achievements, 5 cameras and frame-rate adaptive rendering. No third-party artwork is used.
+**🎮 3D 骑行 | 🌅 昼夜循环 | 🐟 捕鱼挑战 | 🏆 成就系统**
 
-## Deployment
+---
 
-Vercel: create a new project, upload/import this folder, select “Other” as framework, use no build command and `.` as output directory; deploy. The project contains `vercel.json` already. Alternatively run `npx vercel --prod` in this directory while signed into your account.
+## 📸 游戏截图
+
+### 🌅 海岸骑行
+
+![海岸骑行](screenshots/coast.png)
+
+### 🌙 星空月夜
+
+![星空月夜](screenshots/night.png)
+
+### 🦩 鹈鹕特写
+
+![鹈鹕特写](screenshots/pelican.png)
+
+---
+
+## 🎮 在线试玩
+
+**点击下方链接，立即开启你的海岸冒险！**
+
+🌍 GitHub Pages：
+https://你的用户名.github.io/pelican-coast/
+
+🇨🇳 国内试玩地址：
+待发布
+
+💻 推荐使用最新版 Chrome 或 Edge 浏览器。
+
+📱 支持电脑键盘操作与移动设备触屏操作。
+
+> 注意：以上 GitHub Pages 地址为示例，请在正式发布后替换为实际地址。
+
+---
+
+## ✨ 游戏特色
+
+### 🦩 1. 独特的鹈鹕骑手
+
+游戏的主角是一只戴着头盔和墨镜、脖子系着红围巾的鹈鹕。
+
+骑行时，鹈鹕会随着自行车运动做出相应的踩踏动作。
+
+围巾采用布料物理模拟，会随着运动和风力自然飘动。
+
+你还可以控制鹈鹕跳跃、展开翅膀，甚至抬起自行车前轮！
+
+### 🌅 2. 动态昼夜循环
+
+游戏中的时间会不断流逝，天空从浪漫的黄昏逐渐过渡到深蓝色的星空月夜。
+
+感受不同时刻的海岸风光：
+
+- 🌇 温暖的黄昏与海上落日
+- 🌆 渐渐暗下来的暮色
+- 🌌 繁星点点的夜空
+- 🌙 宁静的月夜海岸
+
+### 🌊 3. 动态海洋环境
+
+海面采用动态波浪效果，配合岸边碎浪，营造出不断变化的海岸风景。
+
+骑行过程中，你可以欣赏大海、远处的地平线以及不同光照条件下的海岸环境。
+
+### 🐟 4. 趣味捕鱼玩法
+
+骑着自行车追逐鱼群，通过加速、变道和跳跃捕捉鱼儿。
+
+尝试掌握骑行节奏，在海岸公路上获得更多收获。
+
+当你暂时不操作时，鹈鹕还会进入自动驾驶状态，继续沿着公路骑行并追逐鱼群。
+
+### 🎥 5. 五种不同镜头
+
+支持五种游戏镜头，体验不同视角下的海岸骑行。
+
+包括电影式运镜和鹈鹕视角。
+
+既可以专注于游戏操作，也可以将游戏当作一段动态海岸风景来欣赏。
+
+### 🎵 6. 实时生成的音乐与音效
+
+游戏使用浏览器音频技术实时合成音乐与音效。
+
+音乐节奏会随着鹈鹕的踩踏频率变化，让骑行与音乐相互呼应。
+
+### 🏆 7. 成就系统
+
+游戏设计了 14 个成就，等待你在骑行和捕鱼过程中逐步解锁。
+
+探索不同操作方式，挑战更多有趣的游戏目标！
+
+---
+
+## 🕹️ 操作指南
+
+### 电脑端
+
+| 按键 | 功能 |
+|------|------|
+| W | 加速 |
+| S | 减速 |
+| A | 向左变道 |
+| D | 向右变道 |
+| Space 空格 | 跳跃 |
+| T | 展开翅膀并抬起前轮 |
+
+其他功能：
+
+- 🎥 通过游戏镜头控制功能切换不同视角。
+- 🐟 调整车道，追逐并捕捉鱼儿。
+- 🚲 不操作时，鹈鹕可以自动驾驶。
+
+### 移动端
+
+游戏提供触屏操作按钮。
+
+使用屏幕上的按钮控制加减速、左右移动和特殊动作。
+
+### 💡 游玩小提示
+
+掌握加速、变道和跳跃的时机，尝试捕捉更多鱼儿。
+
+如果想欣赏风景，不妨放开键盘，让鹈鹕自己沿着海岸公路前进！
+
+---
+
+## 🛠️ 技术栈
+
+本项目采用前端 Web 3D 技术开发，无需安装独立游戏客户端。
+
+| 技术 | 用途 |
+|------|------|
+| HTML5 | 游戏页面结构 |
+| CSS3 | 游戏界面与视觉样式 |
+| JavaScript | 游戏逻辑与交互 |
+| Three.js | 3D 场景、模型与渲染 |
+| WebGL | 浏览器实时图形渲染 |
+| Web Audio API | 实时音效与音乐合成 |
+
+### 核心技术探索
+
+- 程序化 3D 场景与角色建模
+- 角色动画与踩踏运动
+- 围巾布料物理模拟
+- 动态海浪与水面效果
+- 实时昼夜循环
+- 多视角摄像机控制
+- 音乐与运动节奏联动
+- 根据帧率自适应调整画质
+
+---
+
+## 💻 本地运行
+
+本游戏为浏览器游戏，可以通过本地 Web 服务器运行。
+
+### 方法一：直接打开
+
+下载本项目的单文件版本，在浏览器中打开 HTML 文件。
+
+注意：部分版本需要联网加载 Three.js 等依赖。
+
+### 方法二：使用本地服务器
+
+克隆项目：
+
+    git clone https://github.com/你的用户名/pelican-coast.git
+
+进入项目目录：
+
+    cd pelican-coast
+
+启动本地服务器：
+
+    python -m http.server 8000
+
+然后使用浏览器访问：
+
+    http://localhost:8000
+
+如果你的电脑没有安装 Python，也可以使用 VS Code 的 Live Server 等本地服务器工具。
+
+---
+
+## 🤖 关于 AI 辅助开发
+
+本项目是一次 AI 辅助游戏开发实验。
+
+我希望探索一个问题：
+
+**一个人借助 AI，究竟可以创造出怎样的游戏世界？**
+
+《鹈鹕海岸》从一段描述游戏创意的提示词开始，借助 ChatGPT 生成初始游戏代码与玩法原型。
+
+项目以创意提示词驱动，涵盖场景生成、角色动画、物理模拟、游戏交互以及音频系统等多个方面。
+
+### 开发工具
+
+- ChatGPT：游戏原型生成、代码开发与技术实现
+- Three.js：3D 游戏开发
+- JavaScript：游戏逻辑与交互实现
+
+未来将继续探索不同 AI 编程工具在游戏开发中的实际应用。
+
+本项目将持续记录 AI 辅助游戏开发过程中的技术尝试、问题修复与玩法迭代。
+
+AI 不只是帮助编写代码的工具，也能成为个人开发者实现创意的重要助手。
+
+---
+
+## 📅 后续开发计划
+
+未来可能探索以下功能：
+
+- [ ] 更多鹈鹕服装与外观
+- [ ] 全新的海岸公路地图
+- [ ] 更多鱼类与特殊鱼群
+- [ ] 动态天气与雨天效果
+- [ ] 更丰富的环境互动
+- [ ] 更多成就与挑战玩法
+- [ ] 游戏成绩保存
+- [ ] 完善移动端操作体验
+- [ ] 优化中国大陆玩家的访问速度
+
+欢迎在 Issues 中提出你的创意或反馈游戏问题！
+
+---
+
+## 💬 交流与反馈
+
+如果你在游戏过程中遇到 Bug，或者对游戏玩法有新的想法，欢迎通过 GitHub Issues 反馈。
+
+如果你对 AI 游戏开发感兴趣，也欢迎一起交流。
+
+---
+
+## ⭐ 支持项目
+
+如果你喜欢《鹈鹕海岸》，欢迎给这个项目点一个 Star！
+
+你的关注是我持续创作新游戏的动力。
+
+感谢每一位试玩和支持本项目的朋友！
+
+**Made with AI · Created by Mark**
