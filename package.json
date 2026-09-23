@@ -1,0 +1,8 @@
+{
+  "name": "pelican-coast",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "A procedural 3D coastal pelican cycling game — a Vercel-ready static site.",
+  "scripts": { "dev": "npx serve .", "start": "npx serve ." }
+}

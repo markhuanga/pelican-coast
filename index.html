@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#091524" />
+  <meta name="description" content="《风与鱼之歌》— 鹈鹕骑车沿着海岸公路追逐飞鱼，穿过橘色黄昏，骑进星河。" />
+  <title>风与鱼之歌 · Pelican Coast</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div id="game" role="application" aria-label="鹈鹕海岸公路 3D 骑行游戏"></div>
+  <div id="vignette"></div>
+  <div id="filmGrain"></div>
+  <div id="toast" aria-live="polite"></div>
+  <div id="hud" class="hidden">
+    <div class="topbar">
+      <div class="brand"><span class="brandMark">✦</span><span>PELICAN<span class="brandSub"> COAST</span></span><span class="brandChinese">风与鱼之歌</span></div>
+      <div class="topActions">
+        <div class="timeChip"><span id="timeEmoji">☀</span><span id="timeText">金色黄昏</span><div class="timeTrack"><div id="timeFill"></div></div></div>
+        <button class="iconButton" id="soundButton" aria-label="切换声音" title="切换声音 M">♫</button>
+        <button class="iconButton" id="cameraButton" aria-label="切换镜头" title="切换镜头 C">▣</button>
+        <button class="iconButton" id="achievementsButton" aria-label="查看成就" title="查看成就">♛</button>
+        <button class="iconButton" id="pauseButton" aria-label="暂停游戏" title="暂停 Esc">Ⅱ</button>
+      </div>
+    </div>
+    <div class="statColumn">
+      <div class="eyebrow">THE OPEN ROAD <i></i> CHAPTER 01</div>
+      <div class="bigScore"><span id="score">000</span><small>PTS</small></div>
+      <div class="scoreHint">海风、自由，还有一点好运气</div>
+      <div class="statDivider"></div>
+      <div class="statRow"><span>已捕获飞鱼</span><b id="fishCount">0</b></div>
+      <div class="statRow"><span>连击</span><b id="combo">× 1</b></div>
+      <div class="statRow"><span>旅途</span><b id="distance">0.00 km</b></div>
+      <div class="statRow"><span>成就</span><b id="achievementCount">0 / 14</b></div>
+      <div class="cameraChip"><span class="dot"></span><span id="cameraName">经典追逐镜头</span><span class="cameraShortcut">C 切换</span></div>
+    </div>
+    <div class="rightBottom">
+      <div class="speedTop">CURRENT SPEED <span id="fps">60 FPS</span></div>
+      <div class="speedRow"><span id="speed">16</span><div><span>KM/H</span><div class="speedText" id="pedalText">随风而行</div></div></div>
+      <div class="speedTrack"><div id="speedFill"></div></div>
+      <div class="modeRow"><span id="autoIndicator" class="autoOn">✦ 自动巡航</span><button id="qualityButton">画质 AUTO</button></div>
+    </div>
+    <div class="controlHint"><span><kbd>W</kbd><kbd>S</kbd> 加减速</span><span><kbd>A</kbd><kbd>D</kbd> 变道</span><span><kbd>SPACE</kbd> 跳跃</span><span><kbd>T</kbd> 展翅翘头</span><span><kbd>C</kbd> 镜头</span></div>
+    <div id="comboBanner" class="comboBanner"><span id="comboBig">3</span><span>FISH COMBO <small>连击奖励</small></span></div>
+    <div id="touchControls" class="touchControls">
+      <div class="touchCluster"><button id="touchLeft" aria-label="向左变道">‹</button><button id="touchRight" aria-label="向右变道">›</button></div>
+      <div class="touchCluster"><button id="touchBrake" class="touchSmaller">刹车</button><button id="touchGas" class="touchSmaller">加速</button><button id="touchJump">跳</button><button id="touchWing">飞</button></div>
+    </div>
+  </div>
+  <div id="startScreen" class="overlay">
+    <div class="startContent">
+      <div class="introLine"><span class="smallSun">✳</span> AN INTERACTIVE COASTAL ADVENTURE <span class="line"></span> VOL. 01</div>
+      <div class="heroEyebrow">在日落尽头，遇见一只不愿停下的鹈鹕。</div>
+      <h1>风与鱼<span>之歌</span><i>✦</i></h1>
+      <div class="englishTitle">PELICAN <span>ON THE</span> COAST</div>
+      <p class="heroDescription">系好红围巾，戴上墨镜，沿着海岸公路追逐飞鱼。<br/>从余晖灿烂的黄昏，一路骑进满天星河。</p>
+      <button id="startButton" class="primaryButton"><span class="primaryCircle">↗</span><span>开启海岸之旅<small>PRESS ENTER TO RIDE</small></span><span class="primaryArrow">→</span></button>
+      <div class="heroFooter"><span>✦ &nbsp; 5 种动态镜头</span><span>✦ &nbsp; 14 个隐藏成就</span><span>✦ &nbsp; 实时音画交互</span></div>
+    </div>
+    <div class="introCorner">NO DESTINATION. JUST THE HORIZON. &nbsp; ↗</div>
+    <div class="introSide">THE LITTLE THINGS MAKE THE BIGGEST ADVENTURES</div>
+  </div>
+  <div id="pauseScreen" class="overlay hidden">
+    <div class="modalCard pauseCard"><div class="modalKicker">TAKE A BREATH</div><h2>歇一会儿，<br/>海风还在等你。</h2><p>你不在的时候，海浪也不会停下。</p><button class="primaryButton" id="resumeButton"><span class="primaryCircle">↗</span><span>继续骑行<small>RESUME THE JOURNEY</small></span><span class="primaryArrow">→</span></button><button class="textButton" id="restartButton">重新开始这一程 ↺</button></div>
+  </div>
+  <div id="achievementPanel" class="drawer hidden" aria-label="成就收藏">
+    <div class="drawerHead"><div><div class="modalKicker">THE MEMORY BOOK</div><h2>旅途纪念册 <small id="drawerProgress">0 / 14</small></h2><p>每一条鱼，每一阵海风，都是值得收藏的瞬间。</p></div><button id="closeAchievements" class="closeButton" aria-label="关闭成就">×</button></div>
+    <div id="achievementList" class="achievementList"></div>
+    <div class="drawerBottom">✦ &nbsp; 有些惊喜，只有骑得足够远才会遇见。</div>
+  </div>
+  <div id="loading" class="loading"><div class="loaderSun">✳</div><span>正在呼唤海风...</span><small>PREPARING THE COAST</small></div>
+  <div id="fatal" class="fatal hidden">3D 场景加载失败。请联网并使用最新版 Chrome、Edge 或 Safari 打开页面。<br/><button onclick="location.reload()">重新加载</button></div>
+  <script>
+    // A clear failure state if a CDN or WebGL module is blocked.
+    setTimeout(() => {
+      const loading = document.getElementById('loading');
+      if (loading && !loading.classList.contains('hidden')) {
+        loading.classList.add('hidden');
+        document.getElementById('fatal').classList.remove('hidden');
+      }
+    }, 16000);
+  </script>
+  <script type="module" src="./game.js"></script>
+</body>
+</html>
